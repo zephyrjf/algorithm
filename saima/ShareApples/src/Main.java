@@ -7,5 +7,14 @@ import java.util.Scanner;
 public class Main {
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
+		int n = sc.nextInt();
+		int sum = 1;
+		// sum = n^n - n + 1
+		// 递归要注意凑一项
+		for (int i = 0; i < n; i++) {
+			sum *= n;
+		}
+		sum = sum - n + 1;
+		System.out.println(sum);
 	}
 }
